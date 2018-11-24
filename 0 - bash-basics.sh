@@ -247,7 +247,7 @@ echo ${my_array_with_fruits[2]}
 echo ${my_array_with_fruits[3]}
 
 # we can add stuff to the array even specifying an index
-# that'sfar away LOL
+# that's far away LOL
 my_array_with_fruits[8]="strawberry"
 
 # We can append stuff to the end of the array
