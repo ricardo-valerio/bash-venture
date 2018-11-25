@@ -11,7 +11,7 @@
 greeting="Hello"
 year_of_tokyo_olympics=2020
 
-# withoutsingle or double quotes we have to escape
+# without single or double quotes we have to escape
 echo $greeting, \(planet\) earth!
 
 # prints exactly what's inside..and don't eval vars
