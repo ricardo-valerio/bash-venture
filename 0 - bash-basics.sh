@@ -14,13 +14,12 @@ year_of_tokyo_olympics=2020
 # without single or double quotes we have to escape
 echo $greeting, \(planet\) earth!
 
+
 # prints exactly what's inside..and don't eval vars
 echo '$greeting, (planet) earth!'
 
 # evaluate vars and prints everything nice and easy
 echo "$greeting, (planet) earth!"
-
-
 echo "Tokyo Olympics will be in $year_of_tokyo_olympics"
 
 
@@ -38,6 +37,7 @@ echo $piano_brand
 echo $upper_case_variable
 echo $lower_case_variable
 
+
 #####################################################
 # There are hundreds of built-in variables:
 # these are just a few
@@ -53,6 +53,7 @@ echo $HOSTNAME
 #####################################################
 ping_commd=$(ping -c 1 google.com | grep 'bytes from' | cut -d = -f 4)
 echo "The ping was $ping_commd"
+
 
 #####################################################
 # arithmetics operations
@@ -87,6 +88,7 @@ echo $addition
 ((b%=2))
 echo $a
 echo $b
+
 
 #####################################################
 # comparisons returned values:
@@ -129,7 +131,7 @@ echo "$a || $b, Result: " $?
 [[ ! $b ]]
 echo "! $b, Result: " $?
 
-
+exit
 #####################################################
 # string operators and operations
 #####################################################
