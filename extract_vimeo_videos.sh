@@ -12,9 +12,11 @@
 # SOME/ID/NUMBERS/HERE/.mp4?token=[TOKEN_HERE]-[SOME_HASH_HERE]
 ######################################################################
 
+
 i=1
-while read f; do
-    downloadable_video_url=$( curl -s $f | grep -o 'https*://[^"]*.mp4?[^"]*' | tail -1 )
-    wget $downloadable_video_url --output-document="$i.mp4"
+
+while read url; do
+    video_title=$( sed -n "$i"p real-world-vue-video-titles.md )
+    wget $( curl -s $url | grep -o 'https*://[^"]*.mp4?*' | sed -n 2p ) --output-document="$video_title.mp4"
     ((i++))
-done < "wrp-srh.4kv"
+done < "real-world-vue-video-urls.md"
